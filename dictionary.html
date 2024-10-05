@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>learn german</title>
+    <link rel="stylesheet" href="dictionary.css">
+</head>
+<body>
+    <header class="header">
+        <input type="text" placeholder="procurar vocabulário" class="input-search">
+        <button class="submit">
+  <img src="icones/search-icon.jpg"
+  class="search-icon">
+        </button>
+        
+    </header>
+    
+    <nav>
+        <a href="#" class="nav-a">home</a>
+        <a href="#" class="nav-a">lab</a>
+        <a href="#" class="nav-a">profile</a>
+        <a href="#" class="nav-a">support</a>
+    </nav>
+    <h3 class="warm-phrase">Aprenda Alemão dentro de um contexto </h3>
+   <div class="block-container">
+    <a href="histories-header.html"><div class="block-content">História</div>
+    </a>
+    <a href="music.html">
+     <div class="block-content">Músicas</div>
+    </a>
+   
+    <a href="German vd.html">
+     <div class="block-content">Filmes</div>
+    </a>
+    <div class="block-content">podcast</div>
+    <div class="block-content">channels</div>
+    <div class="block-content">notícias</div>
+    
+    <div class="block-content">séries</div>
+    <div class="block-content">ciências</div>
+    <div class="block-content">comunidade</div><!-- - -->
+    <div class="block-content">stars</div>
+    <div class="block-content">stars</div>
+    <div class="block-content">stars</div>
+    
+    <div class="block-content">stars</div>
+    <div class="block-content">stars</div>
+    <div class="block-content">stars</div>
+    <div class="block-content">stars</div>
+    <div class="block-content">stars</div>
+    <div class="block-content">stars</div>
+   </div>
+    
+    <script>
+        let phrase = document.querySelector('.warm-phrase');
+        const motivationArr = ['faça da aprendizagem o teu entretenimento', 'foca-se no processo', 'pense nos benefícios de aprender', 'seja regular', 'pouco a pouco se vai longe', 'aprenda Alemão com a mídia', 'ouça músicas'];
+        setInterval( () =>{
+        let randomPhrase = motivationArr[ Math.floor(Math.random()*(motivationArr.length))];
+    phrase.textContent = `${randomPhrase}`;},3000)
+        
+    </script>
+</body>
+</html>

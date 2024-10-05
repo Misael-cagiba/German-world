@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Título da página</title>
+    <style>
+        body{
+            padding-top:30px;
+        }
+       header{
+           position:fixed;
+           top:0;
+           left:0;
+           right:0;
+           height:30px;
+           background-color:yellow;
+           display:flex;
+           justify-content:center;
+           align-items:center;
+       } 
+       .story-item{
+       margin-bottom:4px;
+           background: linear-gradient(to right,lightgreen,pink);
+           height: 50px;
+           display:flex;
+           flex-direction:row;
+           padding:2px 4px;
+            justify-content:center;
+           align-items:center;
+           border-radius:8px;
+       }
+       img{
+           width: 40px;
+           height: 40px;
+           object-fit:cover;
+           border-radius:20px;
+          border: solid 1px tomato;
+       }
+       p{
+           flex:1;
+       }
+       .read-btn{
+           border:none;
+           padding:8px 16px;
+           margin:2px;
+           background:linear-gradient(to right,tomato,lightgreen); 
+       }
+       .lab-btn{
+           border:none;
+           padding:8px 16px;
+           margin:2px;
+           background:linear-gradient(to right,#ff40d2,#eeff95); 
+       }
+    </style>
+</head>
+<body>
+    <header>
+       <h3>Aprenda Alemão com histórias</h3>
+    </header>
+    <div class="stories-header">
+        
+       <div class="story-item">
+        <p>Pettersson und Findus</p>
+        <button class="lab-btn">lab</button>
+        <a href="histories.html"> <button class="read-btn">Ler</button>
+        </a>
+         <img src="images/pettersson-zelt-1.png">
+     </div>
+        <div class="story-item">
+            
+        </div>
+        <div class="story-item">
+            
+        </div>
+    </div>
+    
+    <script>
+        setInterval(function changeColor() {
+            let red = Math.floor(Math.random()*256);
+            let blue = Math.floor(Math.random()*256);
+            let yellow = Math.floor(Math.random()*256);
+            document.body.style.backgroundColor =`rgb(${red},${blue},${yellow})`
+        },1000)
+        
+    </script>
+</body>
+</html>

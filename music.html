@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Título da página</title>
+    <style>
+        body{
+            padding-bottom:40px;
+            background:black;
+        }
+        audio{
+           
+            bottom:0;
+            
+            color:red;
+            border-color:black;
+        }
+        audio::-webkit-media-controls-panel{
+            background: lightpink;
+            border-radius:90px;
+        }
+        audio::-webkit-media-controls-play-button{
+            background-color: tomato;
+            border-radius:50%;
+            color:white;
+        }
+        audio::-webkit-media-controls-timeline{
+            background-color: yellow;
+            padding-top:3px 6px;
+            border-radius:8px;
+        }
+        audio::-webkit-media-controls-current-time-display{
+            background-color: gray;
+        }
+        audio::-webkit-media-controls-time-remaining-display{
+            background-color: brown;
+        }
+        .audio-div{
+            
+            position:fixed;
+            bottom:0;
+            right:0;
+            left:0;
+            padding:3px;
+            display:flex;
+            flex-direction:row;
+            justify-content:center;
+            align-items:center;
+        }
+        p{
+            text-align:center;
+            color:whitesmoke;
+        }
+        button{
+            height: 60px;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        Sorg' dich nicht um mich</br>
+Ich krieg' das schon alleine hin</br>
+Auch wenn ich noch am Straucheln bin</br>
+Mit Schutzanzug im Gepäck</br>
+Krieg' ich nur ein paar Kratzer ab</br>
+Mehr kann mir dabei nicht passieren</br>
+Gib' mir Flügel, halt mich fest</br>
+Schubs' mich raus aus deinem Nest</br>
+Es gibt keinen Grund zu Zweifeln</br>
+Schau' ich land' auf beiden Beinen</br>
+Ich schau' nicht zurück</br>
+Und wenn du nichts hörst, geht's mir gut</br>
+Aber mein Herz pulsiert</br>
+Noch in deinem Takt</br>
+Mach' dich nicht verrückt</br>
+Und wenn du nichts hörst, geht's mir gut</br>
+Oh, in mein'm Herz hast du immer noch deinen</br> Platz
+Die Sonne scheint und ich</br>
+Trag' dein Lächeln im Gesicht</br>
+So bleibst du ein Teil von mir</br>
+In allem was ich bin, in allem was ich tu</br>
+Ich denk' mir deinen Rat dazu, so bleibst du hier</br>
+Für immer bei mir</br>
+Gib' mir Flügel, halt mich fest</br>
+Schubs' mich raus aus deinem Nest</br>
+Es gibt keinen Grund zu Zweifeln</br>
+Schau' ich land' auf beiden Beinen</br>
+Ich schau' nicht zurück</br>
+Und wenn du nichts hörst, geht's mir gut</br>
+Aber mein Herz pulsiert noch in deinem Takt</br>
+Mach' dich nicht verrückt</br>
+Und wenn du nichts hörst, geht's mir gut</br>
+Oh, in mein'm Herz hast du immer noch deinen Platz</br>
+Gib' mir Flügel, halt mich fest</br>
+Schubs' mich raus aus deinem Nest</br>
+Es gibt keinen Grund zu Zweifeln</br>
+Schau' ich land' auf beiden Beinen</br>
+Huh, huh, huh</br>
+Huh, huh, huh</br>
+Huh, huh, huh</br>
+Oh, oh, oh</br>
+Huh, huh, huh</br>
+Huh, huh, huh</br>
+Huh, huh, huh</br>
+Oh, oh, oh</br>
+Ich schau' nicht zurück</br>
+Und wenn du nichts hörst, geht's mir gut</br>
+Aber mein Herz pulsiert noch in deinem Takt</br>
+Mach' dich nicht verrückt</br>
+Und wenn du nichts hörst, geht's mir gut</br>
+Es gibt keinen Grund zu Zweifeln</br>
+Schau' ich land' auf beiden Beinen</br>
+    </p>
+   <div class="audio-div">
+    <audio id="audio" src="music/auf-beiden-beinen.mp3" controls loop>
+   </div>
+   
+   <div id="progress-bar">
+            <div id="progress"></div>
+        </div>
+   <button class="playbtn">play</button>
+   <script>
+       setInterval(
+       (gg)=> {
+           let  ArrColors = [];
+           for(let i=0; i<=6 ;i++){
+               let red = Math.floor(Math.random()*256);
+            let blue = Math.floor(Math.random()*256);
+            let yellow = Math.floor(Math.random()*256);
+            ArrColors.push(`rgb(${red},${blue},${yellow})`);
+            
+           }
+      document.querySelector('.audio-div').style.background= `linear-gradient(to right,${ArrColors[3]}, ${ArrColors[4]}, ${ArrColors[5]})`;;
+   document.body.style.background= `linear-gradient(to right,${ArrColors[0]}, ${ArrColors[1]}, ${ArrColors[2]})`;
+       }
+       ,`${Math.floor(Math.random()*3000)}`)
+       const progressContainer = document.getElementById('progress-bar');
+              const audio = document.getElementById('audio'); document.querySelector('.playbtn').addEventListener('click',event=>{
+           audio.play();
+       });
+       /*
+       audio.addEventListener('timeupdate', function() {
+            const progressPercent = (audio.currentTime / audio.duration) * 100;
+            progressBar.style.width = progressPercent + '%';
+        });
+        */
+   </script>
+   
+</body>
+</html>
